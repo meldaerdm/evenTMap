@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+
+.navbar{
+    background-color: rgb(181, 77, 77);
+    color: #fff;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.navbar .logo{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.navbar .logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+.container-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+
+.container{
+    background: rgb(227,222,222);
+    max-width: 350px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container form .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+}
+
+.container form .input-box{
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.container form .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border: none;
+}
+
+.container form .underline:before{
+    position:absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    left:0;
+    right:0;
+}
+
+.container form .underline:after{
+    position: absolute;
+    content:'';
+    height:2px;
+    width: 100%;
+    left:0;
+    bottom:0;
+    background: rgb(113,27,27);
+    transform: scaleX(0);
+    transform-origin: left;
+    transform: all 0.3s ease;
+}
+
+.container form .input-box input:focus ~ .underline:after,
+.container form .input-box input:focus ~ .underline:after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container form .button{
+    margin: 40px 0 20px 0;
+}
+
+.container form .input-box input[type="submit"]{
+    font-size: 17px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(113,27,27);
+    transition: all 0.3s ease;
+}
+
+.container form .input-box input[type="submit"]:hover{
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    color: rgb(113,27,27);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.container .text{
+    font-size: 14px;
+    text-align: center;
+}
+
+.container .button a{
+    margin: 20px 0 15px 0;
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 17px;
+    text-decoration: none;
+    background: rgb(113,27,27);
+    color:#fff;
+    line-height: 45px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .button a:hover{
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    color: rgb(113,27,27);
+    font-weight: bold;
+    border-radius: 10px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Ekranı</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='giris.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="/ana_ekran">evenTMap</a>
+        </div>
+    </div>
+    <div class="container-wrapper">
+        <div class="container">
+            <form action="/giris" method="POST">
+                <div class="title">Giriş Yap</div>
+
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email giriniz..." required>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="şifrenizi giriniz..." required>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-box button">
+                    <input type="submit" value="Giriş Yap">
+                </div>
+
+            </form>
+
+            <div class="text">veya kayıt değilseniz kayıt olun</div>
+
+            <div class="button">
+                <a href="/kayit">Kayıt Ol</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ödeme Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            padding: 40px;
+        }
+
+        .odeme-kutu {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .odeme-buton {
+            margin-top: 30px;
+            width: 100%;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .odeme-buton:hover {
+            background-color: #1e8449;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="odeme-kutu">
+        <h2>Ödeme Bilgileri</h2>
+
+        <label>Kart Üzerindeki İsim</label>
+        <input type="text" placeholder="Ad Soyad">
+
+        <label>Kart Numarası</label>
+        <input type="text" placeholder="1234 5678 9012 3456">
+
+        <label>Son Kullanma Tarihi</label>
+        <input type="text" placeholder="AA/YY">
+
+        <label>CVV</label>
+        <input type="number" placeholder="123">
+
+        <button class="odeme-buton">Ödeme Yap</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre Değiştirme</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sifre_degistirme.css') }}">
+</head>
+<body>
+     <div class="navbar">
+        <div class="logo">
+            <a href="/ana_ekran">evenTMap</a>
+        </div>
+    </div>
+    <div class="container-wrapper">
+        <div class="container">
+            <form action="/sifre_degistir" method="POST">
+                <div class="title">Şifrenizi Değiştirin</div>
+
+                <div class="input-box">
+                    <input type="password" name="old_password" placeholder="eski şifrenizi giriniz..." required>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name="new_password" placeholder="yeni sifrenizi giriniz..." required>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-box button">
+                    <input type="submit" value="Giriş Yap">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

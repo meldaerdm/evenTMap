@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Onay Bekleyen Kullanıcılar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='onay.css') }}">
+</head>
+<body>
+
+    <h1>Yönetici Onayı Bekleyen Kullanıcılar</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Onayla</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] }}</td>  <!-- id -->
+            <td>{{ user[1] }}</td>  <!-- email -->
+            <td>
+                <form action="{{ url_for('onayla', user_id=user[0]) }}" method="POST">
+                    <button type="submit">Onayla</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
